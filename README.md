@@ -22,7 +22,7 @@ sequenceDiagram
     deactivate server 
 
     Note right of browser: the browser starts executing the JavaScript code that
-    fetches data.json using AJAX after loading the page
+    fetches data.json using AJAX after the page load
 
     browser ->> server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
