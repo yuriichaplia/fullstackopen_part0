@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -60,3 +61,4 @@ sequenceDiagram
 
     Note right of browser: the browser starts rendering all notes (including the note that has
     been submitted via form) on the page
+```
