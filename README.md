@@ -21,8 +21,7 @@ sequenceDiagram
     server -->> browser: JS file
     deactivate server 
 
-    Note right of browser: the browser starts executing the JavaScript code that
-    fetches data.json using AJAX after the page load
+    Note right of browser: the browser executes the JavaScript code that fetches data.json
 
     browser ->> server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
@@ -36,8 +35,7 @@ sequenceDiagram
     server -->> browser: 302 Redirect to /notes
     deactivate server  
 
-    Note right of browser: browser follows redirect and reloads the page to fetch 
-    updated notes
+    Note right of browser: browser follows redirect and reloads the page
 
     browser ->> server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -54,16 +52,14 @@ sequenceDiagram
     server -->> browser: JS file
     deactivate server 
 
-    Note right of browser: the browser starts executing the JavaScript code that
-    fetches data.json using AJAX after loading the page
+    Note right of browser: the browser executes the JavaScript code that fetches data.json
 
     browser ->> server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server -->> browser: data.json file
     deactivate server  
 
-    Note right of browser: the browser starts rendering all notes (including the note that has
-    been submitted via form) on the page
+    Note right of browser: the browser starts rendering all notes on the page
 ```
 
 Exercise 5: Opening website `https://studies.cs.helsinki.fi/exampleapp/spa`
