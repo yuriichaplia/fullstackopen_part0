@@ -17,25 +17,20 @@ sequenceDiagram
     server -->> browser: JS file
     deactivate server 
 
-    Note right of browser: the browser starts executing the JavaScript code that
-    fetches data.json using AJAX after loading the page
+    Note right of browser: the browser executes the JavaScript code that fetches data.json
 
     browser ->> server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server -->> browser: data.json file
     deactivate server  
 
-    Note right of browser: the browser executes the callback function that 
-    renders the notes
+    Note right of browser: the browser executes the callback function that renders the notes
 
-    Note right of browser: adding a new note requires submitting it via form on the page 
-    preventing its default behaviour after which browser executes code that makes POST 
-    request to the server
+    Note right of browser: the browser executes code that makes POST request to the server
 
     browser ->> server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa (JSON note data)
     activate server
     server -->> browser: 201 Created (JSON Confirmation)
     deactivate server
 
-    Note right of browser: JavaScript updates local notes list and re-renders UI without
-    reloading the page
+    Note right of browser: JavaScript updates local notes list and re-renders UI 
